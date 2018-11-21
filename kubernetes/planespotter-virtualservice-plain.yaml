@@ -19,6 +19,8 @@ spec:
         exact: /health.html
     - uri:
         exact: /contact.html
+    - uri:
+        prefix: /static
     route:   
     - destination:
         host: planespotter-frontend
