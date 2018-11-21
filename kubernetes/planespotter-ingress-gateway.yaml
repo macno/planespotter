@@ -34,13 +34,6 @@ spec:
         exact: /health.html
     - uri:
         exact: /contact.html
-    - uri:
-        exact: /static
-   # - requests:
-    #    headers: 
-     #     regex: "/static/*/*"   
-    - uri:
-        prefix: /static
     route:
     - destination:
         host: planespotter-frontend
