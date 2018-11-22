@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block contact_state %}class="active"{% endblock %}
+
+{% block contact_content %}
+<div class="jumbotron">
+  <h1>Feedback</h1>
+  <p>I hope you enjoy this Demo App. If you have any Feedback, feature request, bug report,
+    or simply want to say 'Hello' visit the projects git repo and open issues and pull requests, or simply send an email to <a href="mailto:bsavla@vmware.com?subject=Planepotter Question&body=Hello, I have a question regarding Planespotter">bsavla@vmware.com</a></p>
+   <p>Or Tweet me @boskey</p> 
+  <br>
+  <div class="btn-group" role="group" aria-label="contact">
+    <p><a class="btn btn-default btn-lg" href="mailto:bsavla@vmware.com?subject=Planepotter Question&body=Hello, I have a question regarding Planespotter" role="button">Mail me</a></p>
+    <p><a class="btn btn-default btn-lg" href="https://github.com/boskey/planespotter" role="button">Visit Github Repo</a></p>
+    <a href="https://twitter.com/boskey?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-show-count="false">Follow @boskey</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+  </div>
+</div>
+
+{% endblock %}

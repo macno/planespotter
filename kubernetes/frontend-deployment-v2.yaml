@@ -1,0 +1,32 @@
+---
+apiVersion: apps/v1beta1
+kind: Deployment
+metadata:
+  name: planespotter-frontend-v2
+  namespace: planespotter
+  labels:
+    app: planespotter-frontend
+    tier: frontend
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: planespotter-frontend
+  template:
+    metadata:
+      labels:
+        app: planespotter-frontend
+        tier: frontend
+        version: v2
+    spec:
+      containers:
+      - name: planespotter-fe
+        image: boskey/planespotter-frontend-v2:latest
+        imagePullPolicy: IfNotPresent
+        env:
+        - name: PLANESPOTTER_API_ENDPOINT
+          value: planespotter-svc
+        - name: TIMEOUT_REG
+          value: "5"
+        - name: TIMEOUT_OTHER
+          value: "5"
