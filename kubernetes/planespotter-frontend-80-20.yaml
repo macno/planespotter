@@ -1,0 +1,17 @@
+apiVersion: networking.istio.io/v1alpha3
+kind: VirtualService
+metadata:
+  name: planespotter-frontend8020
+spec:
+  hosts:
+  - planespotter-frontend
+  http:
+  - route:
+    - destination:
+        host: planespotter-frontend
+        subset: v2
+      weight: 20
+    - destination:
+        host: planespotter-frontend
+        subset: v1
+      weight: 80
