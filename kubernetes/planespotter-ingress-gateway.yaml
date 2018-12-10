@@ -25,6 +25,8 @@ spec:
   http:
   - match:
     - uri:
+        prefix: "/static"
+    - uri:
         exact: /index.html
     - uri:
         exact: /registry.html
